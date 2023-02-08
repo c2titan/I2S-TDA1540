@@ -9,12 +9,12 @@
 -- It has low load on the CPLD and it takes up little memory.
 
 -- Only 3 signal wires (I2S) are needed for input (DATA, BCK, LRCK).
--- Output is offset-binary specified for TDA1540: 
---  BCKL - stopped Left DAC clock
+-- output is true offset-binary specified for TDA1540: 
+--  CL - stopped Left DAC clock
 --  DL - Left DAC data (inversed MSB)
---  BCKR - stopped Right DAC clock
+--  CR - stopped Right DAC clock
 --  DR - Right DAC data (inversed MSB)
---  LE - Latch for both channels (latched together)
+--  LL and LR - Latch for both channels (latched together)
 
 -- It flawlessly works with the cheap CPLD EPM240T100C5 from aliexpress.
 
@@ -33,15 +33,15 @@ use ieee.numeric_std.all;
 
 entity MT02_TDA1540_I2S is
 	port(
-		inBCK   : in  std_logic;
-		inDATA  : in  std_logic;
-		inLRCK  : in  std_logic;
-		outBCKL : out std_logic := '1';
-		outBCKR : out std_logic := '1';
-		outDL   : out std_logic := '0';
-		outDR   : out std_logic := '0';
-		outLL   : out std_logic := '0';
-		outLR   : out std_logic := '0'
+		inBCK   : in  std_logic; -- I2S BCK
+		inDATA  : in  std_logic; -- I2S DATA
+		inLRCK  : in  std_logic; -- I2S LRCK
+		outBCKL : out std_logic := '1'; -- DAC CL
+		outBCKR : out std_logic := '1'; -- DAC CR
+		outDL   : out std_logic := '0'; -- DAC DL
+		outDR   : out std_logic := '0'; -- DAC DR
+		outLL   : out std_logic := '0'; -- DAC LL
+		outLR   : out std_logic := '0'  -- DAC LR
 	);
 end MT02_TDA1540_I2S;
 

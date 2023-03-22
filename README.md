@@ -1,7 +1,3 @@
-<head>
-  <meta name="google-site-verification" content="KVYhviWWxSWoijefKrz3K0BXvpN3d9fIpRF5soHNTNY" />
-</head>
-
 # I2S-TDA1540
 VHDL code for converting standard I2S data (64fs) to the offset-binary data needed for TDA1540 DAC.
 - "I2S 2x32=64-bit = 64fs" to "14-bit offset-binary" with inverted MSB and inverted stop-clocked BCK) for TDA1540 DAC (stereo) without the use of MCLK (= even less digital work)

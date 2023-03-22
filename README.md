@@ -1,4 +1,3 @@
-<html>
 <head>
   <meta name="google-site-verification" content="KVYhviWWxSWoijefKrz3K0BXvpN3d9fIpRF5soHNTNY" />
 </head>
@@ -31,4 +30,3 @@ Donate Coffee for miro1360:
 https://www.buymeacoffee.com/miro1360coffee
 Thank you :)
 </body>
-</html>

@@ -33,15 +33,15 @@ use ieee.numeric_std.all;
 
 entity MT02_TDA1540_I2S is
 	port(
-		inBCK   : in  std_logic; -- I2S BCK
-		inDATA  : in  std_logic; -- I2S DATA
-		inLRCK  : in  std_logic; -- I2S LRCK
-		outBCKL : out std_logic := '1'; -- DAC CL
-		outBCKR : out std_logic := '1'; -- DAC CR
-		outDL   : out std_logic := '0'; -- DAC DL
-		outDR   : out std_logic := '0'; -- DAC DR
-		outLL   : out std_logic := '0'; -- DAC LL
-		outLR   : out std_logic := '0'  -- DAC LR
+		inBCK   : in  std_logic;
+		inDATA  : in  std_logic;
+		inLRCK  : in  std_logic;
+		outBCKL : out std_logic := '1';
+		outBCKR : out std_logic := '1';
+		outDL   : out std_logic := '0';
+		outDR   : out std_logic := '0';
+		outLL   : out std_logic := '0';
+		outLR   : out std_logic := '0'
 	);
 end MT02_TDA1540_I2S;
 
@@ -131,9 +131,9 @@ begin
 				dataFlagR <= '0';
 			end if;
 			
-			if (cntOB = 23) AND (inLRCK = '1') then	-- LE pulse duration (2 BCK)
+			if (cntOB = 20) AND (inLRCK = '1') then	-- LE pulse duration (4 BCK)
 				leFlag <= '1';
-			elsif (cntOB >= 25) then
+			elsif (cntOB >= 24) then
 				leFlag <= '0';
 			end if;
 			

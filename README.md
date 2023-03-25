@@ -18,7 +18,7 @@ VHDL code for converting standard I2S data (64fs) to the offset-binary data need
 
 Tutorial how to programm CPLD: 
 https://electrodac.blogspot.com/p/tutorial-how-to-programm-altera-cpld.html
-Quartus project file: https://drive.google.com/file/d/1d7K1boVlPmH3CpWVCVSEavrX2T3UmPR4/view?usp=share_link
+Quartus project file: https://drive.google.com/file/d/1NeyJNVDI5FVpS9xMMXzDV_K4MsZx3c7N/view?usp=sharing
 
 If you like my work and find it helpful, you can donate coffee for me :D 
 Donate Coffee for miro1360: 
